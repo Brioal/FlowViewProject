@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlowView">
+        <attr name="currentIndex" format="integer"/>
+        <attr name="allIndexCount" format="integer"/>
+        <attr name="colorUnDo" format="color"/>
+        <attr name="colorCircle" format="color"/>
+        <attr name="colorDone" format="color"/>
+    </declare-styleable>
+</resources>

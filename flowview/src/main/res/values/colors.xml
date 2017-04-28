@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorUnreach">#DCDCDC</color>
+    <color name="colorDone">#E7AD52</color>
+    <color name="colorCircle">#FDC774</color>
+</resources>
