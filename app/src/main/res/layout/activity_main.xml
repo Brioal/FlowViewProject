@@ -11,5 +11,7 @@
         android:id="@+id/main_flowView"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        app:currentIndex="3"
+        app:allIndexCount="5"
         android:layout_centerInParent="true"/>
 </RelativeLayout>
