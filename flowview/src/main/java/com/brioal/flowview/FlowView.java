@@ -99,7 +99,8 @@ public class FlowView extends View {
     }
 
     public FlowView setFlowCount(int flowCount) {
-        mFlowCount = flowCount - 1;
+        mFlowCount = flowCount;
+        postInvalidate();
         return this;
     }
 
@@ -108,7 +109,8 @@ public class FlowView extends View {
     }
 
     public FlowView setCurrentFlow(int currentFlow) {
-        mCurrentFlow = currentFlow - 1;
+        mCurrentFlow = currentFlow;
+        postInvalidate();
         return this;
     }
 
@@ -128,13 +130,13 @@ public class FlowView extends View {
         mPaintDone.setColor(mColorDone);
         mPaintUnReach.setColor(mColorUnReach);
         mPaintCircle.setColor(mColorCircle);
-        float singleLength = (mWidth - 10 - mCircleRadius * 2) * 1.0f / mFlowCount;//每一段的距离
+        float singleLength = (mWidth - 10 - mCircleRadius * 2) * 1.0f / (mFlowCount-1);//每一段的距离
         float startX = 5 + mCircleRadius;
         float startY = mHeight / 2;
         //绘制基本线条
         canvas.drawRoundRect(new RectF(5 + mCircleRadius, mHeight / 2 - mFlowHeight / 2, mWidth - 5 - mCircleRadius, mHeight / 2 + mFlowHeight / 2), 10, 10, mPaintUnReach);
         //绘制未完成的小圆圈
-        for (int i = 0; i <= mFlowCount; i++) {
+        for (int i = 0; i <= mFlowCount+1; i++) {
             canvas.drawCircle(startX + i * singleLength, startY, mCircleRadius, mPaintUnReach);
         }
         //绘制已完成的线条
